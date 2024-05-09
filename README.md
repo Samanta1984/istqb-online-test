@@ -11,7 +11,7 @@ This is an ISTQB Online Exam Web Project.
 
 
 ## JIRA PROJECT
-[JIRA SCRUM PROJECT](hhttps://samantarp.atlassian.net/jira/software/projects/IOT/boards/4)
+[JIRA SCRUM PROJECT](https://samantarp.atlassian.net/jira/software/projects/IOT/boards/4/backlog)
 This project is using JIRA tool for project management and defect traking following agile methodology SCRUM.
 
 
