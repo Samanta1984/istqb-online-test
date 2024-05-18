@@ -48,36 +48,53 @@
         <title>Bienvenida y respuesta</title>
     </head>
     <body>
-        <h1>Bienvenid@ al examen ISTQB</h1>
-        <p>Por favor rellena los campos a continuación:</p>
+        <h1>Welcome to the ISTQB exam</h1>
+         <p>Please fill in the fields below: </p>
     
         <div id="ejercio1Formulario" class="was-validated">
             <div class="mb-3">
-                <input type="text" id="nombre1" placeholder="Introduce tu nombre" required
+                <input type="text" id="nombre1" placeholder="Name" required
                     minlength="1" maxlength="40" class="form-control">
                 <p class="valid-feedback">Correcto</p>
                 <p class="invalid-feedback">Complementar los datos solicitados</p>
             </div>
     
             <div class="mb-3">
-                <input type="text" id="apellido1" placeholder="Primer Apellido" required
+                <input type="text" id="apellido1" placeholder="First Surname" required
                     minlength="1" maxlength="40" class="form-control">
                 <p class="valid-feedback">Correcto</p>
                 <p class="invalid-feedback">Complementar los datos solicitados</p>
             </div>
     
             <div class="mb-3">
-                <input type="text" id="apellido2" placeholder="Segundo Apellido" required
+                <input type="text" id="apellido2" placeholder="Second Surname" required
                     minlength="1" maxlength="40" class="form-control">
                 <p class="valid-feedback">Correcto</p>
                 <p class="invalid-feedback">Complementar los datos solicitados</p>
             </div>
             
-            <button onclick="mostrarRespuesta()">Finalizar</button>
+            <button type="button" class="btn btn-success" onclick="mostrarRespuesta()">Finalizar</button>
         </div>
     
         <div id="respuesta1"></div>
-        
+
+        <h1>Question:</h1>
+        <h2>Which of the following options is NOT a fundamental principle of testing?</h2>
+        <form id="pregunta" class="was-validated">
+            <div class="mb-3">
+                <select id="respuestas" required>
+                    <option value="" disabled selected></option>
+                    <option value="a">A. Testing can show the presence of defects, but not their absence.</option>
+                    <option value="b">B. Exhaustive testing is possible for all types of software.</option>
+                    <option value="c">C. Early testing is effective in reducing the cost of defects.</option>
+                    <option value="d">D. Defects tend to cluster together.</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-success" onclick="questionCorrect()">Push</button>
+        </form>
+        <p id="resultadoPregunta"></p>
+
+
     <footer class="mt-5 p-4 bg-light text-center">
         <p>Footer</p>
     </footer>
