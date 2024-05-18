@@ -18,7 +18,7 @@ function questionCorrect() {
     if (respuesta === "b") {
         mensaje = "The answer is correct, you get two points.";
     } else if (respuesta === "a") {
-        mensaje = "The answer is correct, you get two points.";
+        mensaje = "The answer is incorrect, you get zero points.";
     } else if (respuesta === "c") {
         mensaje = "The answer is incorrect, you get zero points.";
     } else if (respuesta === "d") {
