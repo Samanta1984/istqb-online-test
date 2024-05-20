@@ -54,21 +54,7 @@
         <div id="ejercio1Formulario" class="was-validated">
             <div class="mb-3">
                 <input type="text" id="nombre1" placeholder="Name" required
-                    minlength="1" maxlength="40" class="form-control">
-                <p class="valid-feedback">Correct</p>
-                <p class="invalid-feedback">Complete the requested information.</p>
-            </div>
-    
-            <div class="mb-3">
-                <input type="text" id="apellido1" placeholder="First Surname" required
-                    minlength="1" maxlength="40" class="form-control">
-                <p class="valid-feedback">Correct</p>
-                <p class="invalid-feedback">Complete the requested information.</p>
-            </div>
-    
-            <div class="mb-3">
-                <input type="text" id="apellido2" placeholder="Second Surname" required
-                    minlength="1" maxlength="40" class="form-control">
+                    minlength="1" maxlength="10" class="form-control">
                 <p class="valid-feedback">Correct</p>
                 <p class="invalid-feedback">Complete the requested information.</p>
             </div>
@@ -82,12 +68,11 @@
         <h2>Which of the following options is NOT a fundamental principle of testing?</h2>
         <form id="pregunta" class="was-validated">
             <div class="mb-3">
-                <select id="respuestas" required>
-                    <option value="" disabled selected></option>
+                <select id="respuestas">
+                    <option value=""></option>
                     <option value="a">A. Testing can show the presence of defects, but not their absence.</option>
                     <option value="b">B. Exhaustive testing is possible for all types of software.</option>
                     <option value="c">C. Early testing is effective in reducing the cost of defects.</option>
-                    <option value="d">D. Defects tend to cluster together.</option>
                 </select>
             </div>
             <button type="button" class="btn btn-success" onclick="questionCorrect()">Push</button>

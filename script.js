@@ -1,9 +1,6 @@
 function mostrarRespuesta() {
     let nombre = document.getElementById("nombre1").value;
-    let primerApellido = document.getElementById("apellido1").value;
-    let segundoApellido = document.getElementById("apellido2").value;
-    let mensaje = "Thank you " + nombre + " " + primerApellido + " " + segundoApellido + "for providing us with your information. We will redirect you to the exam shortly.";
-    
+    let mensaje = " Welcome " + nombre ;
     document.getElementById("respuesta1").textContent = mensaje;
     
 }
