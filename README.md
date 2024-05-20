@@ -2,7 +2,7 @@
 Javasript Project for Istqb Online Test
 # ISTQB ONLINE TEST
 This is an ISTQB Online Exam Web Project.
-[ISTQB ONLINE TEST PROJECT](file:///Users/reyescuesta/Documents/GitHubSami/istqb-online-test/index.html/)
+[ISTQB ONLINE TEST PROJECT](https://samanta1984.github.io/istqb-online-test/)
 
 ## BUILD WITH
 * ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
