@@ -15,3 +15,23 @@ function questionCorrect() {
     document.getElementById("resultadoPregunta").textContent = mensaje;
 }
 
+function puntuacion() {
+    let nombre = document.getElementById("respuestas1").value;
+    let mensaje = "";
+
+    if (nombre === "b") {
+        mensaje = "two points";
+    }
+    else if (nombre === "a") {
+        mensaje = "zero points";
+    }
+    else if (nombre === "c") {
+        mensaje = "zero points";
+    }
+    else {
+        mensaje = "The question is incorrect";
+    }
+
+    document.getElementById("puntuacionRespuesta").innerText = mensaje;
+
+}

@@ -75,9 +75,28 @@
                     <option value="c">C. Early testing is effective in reducing the cost of defects.</option>
                 </select>
             </div>
-            <button type="button" class="btn btn-success" onclick="questionCorrect()">See answer</button>
+            <button type="button" class="btn btn-success" onclick="questionCorrect()">Correct</button>
         </form>
         <p id="resultadoPregunta"></p>
+
+        <div id="respuesta1"></div>
+
+        <h1>Check answer score:</h1>
+
+        <form id="pregunta1" class="was-validated">
+        <div class="mb-3">
+        <select id="respuestas1">
+            <option value=""></option>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+        </select>
+    </div>
+    <button type="button" class="btn btn-success" onclick="puntuacion()">Correct</button>
+    </form>
+    <p id="puntuacionRespuesta"></p>
+
+    <h1>Ten Question:</h1>
 
 
     <footer class="mt-5 p-4 bg-light text-center">
