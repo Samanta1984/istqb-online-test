@@ -48,34 +48,31 @@
                 <button type="button" class="btn btn-success" onclick="mostrarBienvenida()">Push</button>
             </form>
 
-            <div id="respuesta1"></div>
+            <div id="respuestaBienvenida"></div>
 
         </div>
         <div id="test">
             <h1>Question:</h1>
-            <h2>Which of the following options is NOT a fundamental principle of testing?</h2>
-            <form id="pregunta" class="was-validated">
+            <h2>1.Which of the following options is NOT a fundamental principle of testing?</h2>
+            <form id="pregunta0" class="was-validated">
                 <div class="mb-3">
-                    <select id="respuestas1">
+                    <select id="respuestas0">
                         <option value=""></option>
                         <option value="a">A. Testing can show the presence of defects, but not their absence.</option>
                         <option value="b">B. Exhaustive testing is possible for all types of software.</option>
                         <option value="c">C. Early testing is effective in reducing the cost of defects.</option>
                     </select>
                 </div>
-                <button type="button" class="btn btn-success" onclick="questionCorrect()">See Answer</button>
-                <button type="button" class="btn btn-success" onclick="corregir()">Correct</button>
+                <button type="button" class="btn btn-success" onclick="verRespuesta(0)">See Answer</button>
+                <button type="button" class="btn btn-success" onclick="corregir(0)">Correct</button>
             </form>
-            <p id="resultadoQuestionCorrect1"></p>
+            <p id="resultadoVerRespuesta0"></p>
+            <p id="resultadoCorregir0"></p>
 
-            <div id="resultadoCorrect1"></div>
-
-            <h1>Ten Question:</h1>
-
-            <h2>1.What is the main objective of regression testing?</h2>
-            <form id="pregunta0" class="was-validated">
+            <h2>2.What is the main objective of regression testing?</h2>
+            <form id="pregunta1" class="was-validated">
                 <div class="mb-3">
-                    <select id="q0">
+                    <select id="respuesta1">
                         <option value=""></option>
                         <option value="a">A. Ensure the software is completely defect-free.</option>
                         <option value="b">B. Ensure that changes in the code do not negatively affect existing software.
@@ -84,14 +81,16 @@
                     </select>
                 </div>
             </form>
-            <button type="button" class="btn btn-success" onclick="question()">Correct</button>
-            <button type="button" class="btn btn-success" onclick="score()">See score</button>
+            <button type="button" class="btn btn-success" onclick="verRespuesta(1)">See Answer</button>
+            <button type="button" class="btn btn-success" onclick="corregir(1)">Corret</button>
+            <p id="resultadoVerRespuesta1"></p>
+            <p id="resultadoCorregir1"></p>
 
-            <h2>2.Which testing technique focuses on finding defects in the software without reference to the
+            <h2>3.Which testing technique focuses on finding defects in the software without reference to the
                 specification or implementation?</h2>
-            <form id="pregunta1" class="was-validated">
+            <form id="pregunta2" class="was-validated">
                 <div class="mb-3">
-                    <select id="q1">
+                    <select id="respuesta2">
                         <option value=""></option>
                         <option value="a">A. Exploratory testing.</option>
                         <option value="b">B. White-box testing.</option>
@@ -99,14 +98,15 @@
                     </select>
                 </div>
             </form>
-            <button type="button" class="btn btn-success" onclick="question()">Correct</button>
-            <button type="button" class="btn btn-success" onclick="score()">See score</button>
+            <button type="button" class="btn btn-success" onclick="verRespuesta(2)">See Answer</button>
+            <button type="button" class="btn btn-success" onclick="corregir(2)">Corret</button>
+            <p id="resultadoVerRespuesta2"></p>
+            <p id="resultadoCorregir2"></p>
 
-
-            <h2>3. Which of the following is not a category of white-box testing techniques?</h2>
-            <form id="pregunta1" class="was-validated">
+            <h2>4. Which of the following is not a category of white-box testing techniques?</h2>
+            <form id="pregunta3" class="was-validated">
                 <div class="mb-3">
-                    <select id="q2">
+                    <select id="respuesta3">
                         <option value=""></option>
                         <option value="a">A. Condition testing.</option>
                         <option value="b">B. Loop testing.</option>
@@ -114,14 +114,16 @@
                     </select>
                 </div>
             </form>
-            <button type="button" class="btn btn-success" onclick="question()">Correct</button>
-            <button type="button" class="btn btn-success" onclick="score()">See score</button>
+            <button type="button" class="btn btn-success" onclick="verRespuesta(3)">See Answer</button>
+            <button type="button" class="btn btn-success" onclick="corregir(3)">Corret</button>
+            <p id="resultadoVerRespuesta3"></p>
+            <p id="resultadoCorregir3"></p>
 
-            <h2>4.What type of testing focuses on determining if the software can handle an
+            <h2>5.What type of testing focuses on determining if the software can handle an
                 expected volume of data?</h2>
-            <form id="pregunta3" class="was-validated">
+            <form id="pregunta4" class="was-validated">
                 <div class="mb-3">
-                    <select id="q3">
+                    <select id="respuesta4">
                         <option value=""></option>
                         <option value="a">A. Load testing.</option>
                         <option value="b">B. Performance testing.</option>
@@ -129,13 +131,15 @@
                     </select>
                 </div>
             </form>
-            <button type="button" class="btn btn-success" onclick="question()">Correct</button>
-            <button type="button" class="btn btn-success" onclick="score()">See score</button>
+            <button type="button" class="btn btn-success" onclick="verRespuesta(4)">See Answer</button>
+            <button type="button" class="btn btn-success" onclick="corregir(4)">Corret</button>
+            <p id="resultadoVerRespuesta4"></p>
+            <p id="resultadoCorregir4"></p>
 
-            <h2>5.What is "acceptance criteria" in the context of testing?</h2>
-            <form id="pregunta4" class="was-validated">
+            <h2>6.What is "acceptance criteria" in the context of testing?</h2>
+            <form id="pregunta5" class="was-validated">
                 <div class="mb-3">
-                    <select id="q4">
+                    <select id="respuesta5">
                         <option value=""></option>
                         <option value="a">A. A set of software technical specifications.
                         </option>
@@ -146,14 +150,16 @@
                     </select>
                 </div>
             </form>
-            <button type="button" class="btn btn-success" onclick="question()">Correct</button>
-            <button type="button" class="btn btn-success" onclick="score()">See score</button>
+            <button type="button" class="btn btn-success" onclick="verRespuesta(5)">See Answer</button>
+            <button type="button" class="btn btn-success" onclick="corregir(5)">Corret</button>
+            <p id="resultadoVerRespuesta5"></p>
+            <p id="resultadoCorregir5"></p>
 
-            <h2>6.Which of the following is a testing technique based on the
+            <h2>7.Which of the following is a testing technique based on the
                 tester's experience and intuition?</h2>
-            <form id="pregunta5" class="was-validated">
+            <form id="pregunta6" class="was-validated">
                 <div class="mb-3">
-                    <select id="q5">
+                    <select id="respuesta6">
                         <option value=""></option>
                         <option value="a">A. White-box testing. </option>
                         <option value="b">B. Regression testing.</option>
@@ -161,13 +167,15 @@
                     </select>
                 </div>
             </form>
-            <button type="button" class="btn btn-success" onclick="question()">Correct</button>
-            <button type="button" class="btn btn-success" onclick="score()">See score</button>
+            <button type="button" class="btn btn-success" onclick="verRespuesta(6)">See Answer</button>
+            <button type="button" class="btn btn-success" onclick="corregir(6)">Corret</button>
+            <p id="resultadoVerRespuesta6"></p>
+            <p id="resultadoCorregir6"></p>
 
-            <h2>7. What type of testing focuses on simulating user interaction with the software?</h2>
-            <form id="pregunta6" class="was-validated">
+            <h2>8. What type of testing focuses on simulating user interaction with the software?</h2>
+            <form id="pregunta7" class="was-validated">
                 <div class="mb-3">
-                    <select id="q6">
+                    <select id="respuesta7">
                         <option value=""></option>
                         <option value="a">A. Integration testing.</option>
                         <option value="b">B. User testing.</option>
@@ -175,15 +183,17 @@
                     </select>
                 </div>
             </form>
-            <button type="button" class="btn btn-success" onclick="question()">Correct</button>
-            <button type="button" class="btn btn-success" onclick="score()">See score</button>
+            <button type="button" class="btn btn-success" onclick="verRespuesta(7)">See Answer</button>
+            <button type="button" class="btn btn-success" onclick="corregir(7)">Corret</button>
+            <p id="resultadoVerRespuesta7"></p>
+            <p id="resultadoCorregir7"></p>
 
 
-            <h2>8. Which phase of the software development lifecycle is most appropriate for executing regression tests?
+            <h2>9. Which phase of the software development lifecycle is most appropriate for executing regression tests?
             </h2>
-            <form id="pregunta7" class="was-validated">
+            <form id="pregunta8" class="was-validated">
                 <div class="mb-3">
-                    <select id="q7">
+                    <select id="respuesta8">
                         <option value=""></option>
                         <option value="a">A. Development phase.</option>
                         <option value="b">B. Planning phase.</option>
@@ -191,14 +201,16 @@
                     </select>
                 </div>
             </form>
-            <button type="button" class="btn btn-success" onclick="question()">Correct</button>
-            <button type="button" class="btn btn-success" onclick="score()">See score</button>
+            <button type="button" class="btn btn-success" onclick="verRespuesta(8)">See Answer</button>
+            <button type="button" class="btn btn-success" onclick="corregir(8)">Corret</button>
+            <p id="resultadoVerRespuesta8"></p>
+            <p id="resultadoCorregir8"></p>
 
 
-            <h2>9. What is the main objective of user acceptance testing?</h2>
-            <form id="pregunta8" class="was-validated">
+            <h2>10. What is the main objective of user acceptance testing?</h2>
+            <form id="pregunta9" class="was-validated">
                 <div class="mb-3">
-                    <select id="q8">
+                    <select id="respuesta9">
                         <option value=""></option>
                         <option value="a">A. Validate if the software meets user and business requirements.</option>
                         <option value="b">B. Test software security.</option>
@@ -206,25 +218,10 @@
                     </select>
                 </div>
             </form>
-            <button type="button" class="btn btn-success" onclick="question()">Correct</button>
-            <button type="button" class="btn btn-success" onclick="score()">See score</button>
-
-
-            <h2>10. Which of the following is a benefit of test automation?</h2>
-            <form id="pregunta9" class="was-validated">
-                <div class="mb-3">
-                    <select id="q9">
-                        <option value=""></option>
-                        <option value="a">A. Increased time required to execute tests.</option>
-                        <option value="b">B. Higher susceptibility to human errors.</option>
-                        <option value="c">C. Reduction of time needed to execute repetitive tests.</option>
-                    </select>
-                </div>
-            </form>
-
-            <button type="button" class="btn btn-success" onclick="question()">Correct</button>
-            <button type="button" class="btn btn-success" onclick="score()">See score</button>
-            <p id="answerresult"></p>
+            <button type="button" class="btn btn-success" onclick="verRespuesta(9)">See Answer</button>
+            <button type="button" class="btn btn-success" onclick="corregir(9)">Corret</button>
+            <p id="resultadoVerRespuesta9"></p>
+            <p id="resultadoCorregir9"></p>
 
         </div>
         <div id="ranking">
