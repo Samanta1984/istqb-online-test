@@ -1,4 +1,6 @@
-function mostrarRespuesta() {
+// Primera : Welcome Student
+
+function mostrarBienvenida() {
     let nombre = document.getElementById("nombre1").value;
     let mensaje = " Welcome " + nombre ;
     document.getElementById("respuesta1").textContent = mensaje;
@@ -6,32 +8,42 @@ function mostrarRespuesta() {
 }
 
 
-
+// Segunda: See Answer
 
 function questionCorrect() {
     let respuesta = "B";
     let mensaje = " The correct answer is " + respuesta;
 
-    document.getElementById("resultadoPregunta").textContent = mensaje;
+    document.getElementById("resultadoQuestionCorrect1").textContent = mensaje;
 }
-
-function puntuacion() {
-    let nombre = document.getElementById("respuestas1").value;
+// Tercera: Correct Question
+function correct() {
+    let respuestaSeleccionada = document.getElementById("respuestas1").value;
     let mensaje = "";
 
-    if (nombre === "b") {
-        mensaje = "two points";
+    if (respuestaSeleccionada === "b") {
+        mensaje = "The question is correct";
     }
-    else if (nombre === "a") {
-        mensaje = "zero points";
+    else if (respuestaSeleccionada === "a") {
+        mensaje = "The question is incorrect";
     }
-    else if (nombre === "c") {
-        mensaje = "zero points";
+    else if (respuestaSeleccionada === "c") {
+        mensaje = "The question is incorrect";
     }
     else {
         mensaje = "The question is incorrect";
     }
 
-    document.getElementById("puntuacionRespuesta").innerText = mensaje;
+    document.getElementById("resultadoCorrect1").innerText = mensaje;
 
+}
+
+//Tercera 
+
+function question() {
+    let respuesta = "B";
+    let respuesta1 = "A"
+    let mensaje = " The correct answer is " + respuesta + respuesta1;
+
+    document.getElementById("answerresult").textContent = mensaje;
 }
