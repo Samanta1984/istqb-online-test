@@ -17,22 +17,31 @@ function questionCorrect() {
     document.getElementById("resultadoQuestionCorrect1").textContent = mensaje;
 }
 // Tercera: Correct Question
-function correct() {
+function corregir() {
     let respuestaSeleccionada = document.getElementById("respuestas1").value;
     let mensaje = "";
+    let puntuacion = 0;
+    let respuesta = "";
 
     if (respuestaSeleccionada === "b") {
-        mensaje = "The question is correct";
+        puntuacion = 2;
+        respuesta = "correct";
     }
     else if (respuestaSeleccionada === "a") {
-        mensaje = "The question is incorrect";
+        puntuacion = 0;
+        respuesta = "icorrect";
     }
     else if (respuestaSeleccionada === "c") {
-        mensaje = "The question is incorrect";
+        puntuacion = 0;
+        respuesta = "incorrect";
     }
     else {
-        mensaje = "The question is incorrect";
+        puntuacion = -1;
+        respuesta = "incorrect";
+        
     }
+
+    mensaje = " The question is " + respuesta + " you recive " + puntuacion;
 
     document.getElementById("resultadoCorrect1").innerText = mensaje;
 
