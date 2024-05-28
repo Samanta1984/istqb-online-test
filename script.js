@@ -28,15 +28,15 @@ function corregir() {
         respuesta = "correct";
     }
     else if (respuestaSeleccionada === "a") {
-        puntuacion = 0;
+        puntuacion = -1;
         respuesta = "icorrect";
     }
     else if (respuestaSeleccionada === "c") {
-        puntuacion = 0;
+        puntuacion = -1;
         respuesta = "incorrect";
     }
     else {
-        puntuacion = -1;
+        puntuacion = 0;
         respuesta = "incorrect";
         
     }
