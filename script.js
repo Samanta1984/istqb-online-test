@@ -65,3 +65,5 @@ function resultadoRespuesta() {
 
     document.getElementById("resultadoPuntos").innerText = "Total : " + resultadoPuntos + " poinst. ";
 }
+
+//Quinto: Ranking
