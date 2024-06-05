@@ -43,3 +43,25 @@ function corregir(numeroPregunta) {
     mensaje = " The question is " + respuesta + " you recive " + puntuacion;
     document.getElementById("resultadoCorregir" + numeroPregunta).innerText = mensaje;
 }
+
+//Cuarto: Finish test
+function resultadoRespuesta() {
+    let resultadoPuntos = 0;
+
+
+    for (let i = 0; i < respuestaCorrecta.length; i++) {
+        let respuestaSeleccionada = document.getElementById("respuesta" + i).value;
+
+
+        if (respuestaSeleccionada === respuestaCorrecta[i]) {
+            resultadoPuntos += 2;
+        } else if (respuestaSeleccionada === "") {
+            resultadoPuntos += 0;
+        } else {
+            resultadoPuntos -= 1;
+        }
+    }
+
+
+    document.getElementById("resultadoPuntos").innerText = "Total : " + resultadoPuntos + " poinst. ";
+}
