@@ -63,7 +63,7 @@ function resultadoRespuesta() {
     }
 
 
-    document.getElementById("resultadoPuntos").innerText = "Total : " + resultadoPuntos + " poinst. ";
+    document.getElementById("resultadoPuntos").innerText = "Total : " + resultadoPuntos + " points. ";
 }
 
 //Quinto: Ranking
