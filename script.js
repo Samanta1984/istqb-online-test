@@ -1,4 +1,5 @@
 let respuestaCorrecta = ["b", "a", "c", "a", "c", "c", "a", "b", "c", "a"];
+let estudiantes = []; 
 
 // Primera : Welcome Student
 
@@ -45,6 +46,7 @@ function corregir(numeroPregunta) {
 }
 
 //Cuarto: Finish test
+
 function resultadoRespuesta() {
     let resultadoPuntos = 0;
 
@@ -67,3 +69,21 @@ function resultadoRespuesta() {
 }
 
 //Quinto: Ranking
+
+const response = [
+    {
+        id: 1,
+        name: "John",
+        nota: 4
+    },
+    {
+        id: 2,
+        name: "Zack",
+        nota: 8
+    },
+    {
+        id: 3, 
+        name: "Peter",
+        nota: 0
+    }
+]
