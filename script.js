@@ -1,5 +1,5 @@
 let respuestaCorrecta = ["b", "a", "c", "a", "c", "c", "a", "b", "c", "a"];
-let estudiantes = []; 
+let estudiantes = [];
 
 // Primera : Welcome Student
 
@@ -70,20 +70,32 @@ function resultadoRespuesta() {
 
 //Quinto: Ranking
 
-const response = [
-    {
-        id: 1,
-        name: "John",
-        nota: 4
-    },
-    {
-        id: 2,
-        name: "Zack",
-        nota: 8
-    },
-    {
-        id: 3, 
-        name: "Peter",
-        nota: 0
+let nombres = ["Lola", "Maria", "Pedro", "Mireia", "Lucas", "Miguel", "Thomas", "Anabel", "Pablo", "Sara"];
+let notas = [4, 8, 0, 7, 6, 5, 9, 2, 3, 10];
+let ranking = [];
+
+for (let i = 0; i < nombres.length; i++) {
+    ranking.push({ nombre: nombres[i], nota: notas[i] });
+}
+
+for (let i = 0; i < ranking.length; i++) {
+    estudiantes.push({ nombre: ranking[i].nombre, puntos: ranking[i].nota });
+}
+
+function mostrarRanking() {
+    estudiantes.sort(function (a, b) {
+        return b.puntos - a.puntos;
+    });
+    let rankingTexto = "";
+    for (let i = 0; i < estudiantes.length; i++) {
+        rankingTexto += (i + 1) + ". " + estudiantes[i]["nombre"] + " - " + estudiantes[i]["puntos"] + " puntos\n";
     }
-]
+    document.getElementById("resultadoFinal").innerText = rankingTexto;
+}
+
+
+function resultadoRanking() {
+    mostrarRanking();
+}
+
+
