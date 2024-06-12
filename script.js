@@ -70,8 +70,8 @@ function resultadoRespuesta() {
 
 //Quinto: Ranking
 
-let nombres = ["Lola", "Maria", "Pedro", "Mireia", "Lucas", "Miguel", "Thomas", "Anabel", "Pablo", "Sara"];
-let notas = [4, 8, 0, 7, 6, 5, 9, 2, 3, 10];
+let nombres = ["Lola", "Maria", "Pedro", "Mireia", "Lucas", "Miguel", "Thomas", "Anabel", "Pablo", "Sara","Jorge"];
+let notas = [4, 8, 0, 7, 6, 5, 9, 2, 3, 10, -10];
 let ranking = [];
 
 for (let i = 0; i < nombres.length; i++) {
@@ -88,7 +88,7 @@ function mostrarRanking() {
     });
     let rankingTexto = "";
     for (let i = 0; i < estudiantes.length; i++) {
-        rankingTexto += (i + 1) + ". " + estudiantes[i]["nombre"] + " - " + estudiantes[i]["puntos"] + " puntos\n";
+        rankingTexto += (i + 1) + " " + estudiantes[i]["nombre"] + "  " + estudiantes[i]["puntos"] + " puntos\n";
     }
     document.getElementById("resultadoFinal").innerText = rankingTexto;
 }
