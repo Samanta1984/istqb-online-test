@@ -39,16 +39,16 @@
 
             <form id="ejercio1Formulario" class="was-validated">
                 <div class="mb-3">
-                    <input type="text" id="nombre1" placeholder="Name" required minlength="1" maxlength="10"
+                    <input type="text" id="nombre1" data-cy="input-nombre-1" required minlength="1" maxlength="10"
                         class="form-control">
-                    <p class="valid-feedback">Correct</p>
-                    <p class="invalid-feedback">Complete the requested information.</p>
+                    <p class="valid-feedback" data-cy="succes-welcome-message">Correct</p>
+                    <p class="invalid-feedback" data-cy="error-welcome-message">Complete the requested information.</p>
                 </div>
 
-                <button type="button" class="btn btn-success" onclick="mostrarBienvenida()">Push</button>
+                <button type="button" class="btn btn-success" data-cy="button-start" onclick="mostrarBienvenida()">Push</button>
             </form>
 
-            <div id="respuestaBienvenida"></div>
+            <div id="respuestaBienvenida" data-cy="respuesta-Bienvenida"></div>
             <br>
 
         </div>
