@@ -2,29 +2,26 @@ let respuestaCorrecta = ["b", "a", "c", "a", "c", "c", "a", "b", "c", "a"];
 let estudiantes = [];
 
 // Primera : Welcome Student
-
 function mostrarBienvenida() {
     let nombre = document.getElementById("nombre1").value;
-    let mensaje = " Welcome " + nombre;
+    let mensaje = "Welcome " + nombre;
     document.getElementById("respuestaBienvenida").innerText = mensaje;
 
+    // Añadir el estudiante a la lista si no existe ya
+    let estudianteExistente = estudiantes.find(estudiante => estudiante.nombre === nombre);
+    if (!estudianteExistente) {
+        estudiantes.push({ nombre: nombre, puntos: 0 });
+    }
 }
 
-
 // Segunda: See Answer
-
 function verRespuesta(numeroPregunta) {
-
     let respuesta = respuestaCorrecta[numeroPregunta];
-    let mensaje = " The correct answer is " + respuesta.toUpperCase();
-
+    let mensaje = "The correct answer is " + respuesta.toUpperCase();
     document.getElementById("resultadoVerRespuesta" + numeroPregunta).innerText = mensaje;
 }
 
-
-
-//Tercera: Correct Question
-
+// Tercera: Correct Question
 function corregir(numeroPregunta) {
     let respuestaSeleccionada = document.getElementById("respuesta" + numeroPregunta).value;
     let mensaje = "";
@@ -41,19 +38,23 @@ function corregir(numeroPregunta) {
         puntuacion = -1;
         respuesta = "incorrect";
     }
-    mensaje = " The question is " + respuesta + " you recive " + puntuacion;
+    mensaje = "The question is " + respuesta + " you receive " + puntuacion;
     document.getElementById("resultadoCorregir" + numeroPregunta).innerText = mensaje;
+
+    // Actualizar la puntuación del estudiante
+    let nombre = document.getElementById("nombre1").value;
+    let estudiante = estudiantes.find(est => est.nombre === nombre);
+    if (estudiante) {
+        estudiante.puntos += puntuacion;
+    }
 }
 
-//Cuarto: Finish test
-
+// Cuarto: Finish test
 function resultadoRespuesta() {
     let resultadoPuntos = 0;
 
-
     for (let i = 0; i < respuestaCorrecta.length; i++) {
         let respuestaSeleccionada = document.getElementById("respuesta" + i).value;
-
 
         if (respuestaSeleccionada === respuestaCorrecta[i]) {
             resultadoPuntos += 2;
@@ -64,14 +65,19 @@ function resultadoRespuesta() {
         }
     }
 
+    // Actualizar la puntuación total del estudiante
+    let nombre = document.getElementById("nombre1").value;
+    let estudiante = estudiantes.find(est => est.nombre === nombre);
+    if (estudiante) {
+        estudiante.puntos = resultadoPuntos;
+    }
 
-    document.getElementById("resultadoPuntos").innerText = "Total : " + resultadoPuntos + " points. ";
+    document.getElementById("resultadoPuntos").innerText = "Total: " + resultadoPuntos + " points.";
 }
 
-//Quinto: Ranking
-
-let nombres = ["Lola", "Maria", "Pedro", "Mireia", "Lucas", "Miguel", "Thomas", "Anabel", "Pablo", "Sara","Jorge"];
-let notas = [4, 8, 0, 7, 6, 5, 9, 2, 3, 10, -10];
+// Quinto: Ranking
+let nombres = [];
+let notas = [];
 let ranking = [];
 
 for (let i = 0; i < nombres.length; i++) {
@@ -93,9 +99,16 @@ function mostrarRanking() {
     document.getElementById("resultadoFinal").innerText = rankingTexto;
 }
 
+function limpiarRespuestas() {
+    for (let i = 0; i < respuestaCorrecta.length; i++) {
+        document.getElementById("respuesta" + i).value = "";
+        document.getElementById("resultadoCorregir" + i).innerText = "";
+        document.getElementById("resultadoVerRespuesta" + i).innerText = "";
+    }
+    document.getElementById("resultadoPuntos").innerText = "";
+}
 
 function resultadoRanking() {
     mostrarRanking();
+    limpiarRespuestas();
 }
-
-
