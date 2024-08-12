@@ -28,7 +28,7 @@ This project adopts BDD Methodology for testing.
 
 ### CYPRESS E2E TEST
 Regression E2E Test have been developed for this project using Cypress. Those test are executed in both Web and Mobile platforms.
-[Github E2E Project]((https://github.com/Samanta1984/e2e-testistqb)
+[Github E2E Project](https://github.com/Samanta1984/e2e-testistqb)
 [Cypress E2E Test Results](https://cloud.cypress.io/projects/brpb4n/)
  
 
