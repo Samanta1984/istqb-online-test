@@ -23,15 +23,15 @@ This project adopts BDD Methodology for testing.
 
 2. Functional test scenarios are executed manually on both Desktop and Mobile platforms for each user story. Any encountered bugs are promptly logged on JIRA and linked to the respective user story and test scenario. Comprehensive test results are meticulously documented using Zephyr Scale.
 
-3. Upon completion of each Sprint, a new release version is crafted, encompassing:
-
-* Successfully completed user stories.
-* Detailed reports of functional test results and bugs.
+3. Regression test scenarios are executed automatically using Cypress.
 
 
-### TEST RESULTS
-Functional test results and bug report for each Sprint:
-* [Test Results Reports](/test-results/) 
+### CYPRESS E2E TEST
+Regression E2E Test have been developed for this project using Cypress. Those test are executed in both Web and Mobile platforms.
+[Github E2E Project]((https://github.com/Samanta1984/e2e-testistqb)
+[Cypress E2E Test Results](https://cloud.cypress.io/projects/brpb4n/)
+ 
+
 
 
 ## AUTHOR
